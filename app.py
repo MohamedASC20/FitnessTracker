@@ -4,11 +4,19 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    return 'Hello Team Edge!'
+    return 'Welcome to Fitness Track'
 
-@app.route('/about')
+@app.route('/workout')
 def about():
-    return render_template(index.html)
+    return render_template(workoutlog.html)
+
+@app.route('/waterintake')
+def about():
+    return render_template(waterintake.html)
+
+@app.route('/suggestions')
+def about():
+    return render_template(suggestions.html)
 
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0')
